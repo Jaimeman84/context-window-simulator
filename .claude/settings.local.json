@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(npx kill-port:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(dir docs*.md README.md CHANGELOG.md)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

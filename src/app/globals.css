@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-base-100 text-base-content;
+  }
+}
+
+@layer components {
+  /* Message Card Styles */
+  .message-card {
+    @apply bg-base-200 rounded-lg p-4 mb-3 transition-all duration-300;
+  }
+
+  .message-card--hidden {
+    @apply opacity-40 border-2 border-dashed border-gray-400;
+  }
+
+  .message-card__header {
+    @apply flex items-center gap-2 mb-2 text-sm font-semibold;
+  }
+
+  .message-card__content {
+    @apply text-sm leading-relaxed;
+  }
+
+  /* Progress Bar Styles */
+  .progress-bar {
+    @apply w-full;
+  }
+
+  .progress-bar__label {
+    @apply flex justify-between items-center mb-2 text-sm font-medium;
+  }
+
+  .progress-bar__track {
+    @apply w-full h-6 bg-base-300 rounded-full overflow-hidden relative shadow-inner;
+  }
+
+  .progress-bar__fill {
+    @apply transition-all duration-500 ease-out;
+    display: block;
+    height: 100%;
+  }
+
+  .progress-bar__fill--success {
+    @apply bg-success;
+    background: #10b981 !important;
+  }
+
+  .progress-bar__fill--warning {
+    @apply bg-warning;
+    background: #f59e0b !important;
+  }
+
+  .progress-bar__fill--error {
+    @apply bg-error;
+    background: #ef4444 !important;
+  }
+
+  /* Context Window Styles */
+  .context-window {
+    @apply border-2 border-base-300 rounded-xl p-6 bg-base-100;
+  }
+
+  .context-window__messages {
+    @apply max-h-64 overflow-y-auto pr-2;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  .context-window__messages::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .context-window__messages::-webkit-scrollbar-track {
+    @apply bg-base-200 rounded-full;
+  }
+
+  .context-window__messages::-webkit-scrollbar-thumb {
+    @apply bg-base-300 rounded-full hover:bg-base-content/20;
+  }
+
+  /* Animations */
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
