@@ -12,7 +12,8 @@
       "Bash(cat:*)",
       "Bash(ls:*)",
       "Bash(dir docs*.md README.md CHANGELOG.md)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(dir:*)"
     ]
   }
 }

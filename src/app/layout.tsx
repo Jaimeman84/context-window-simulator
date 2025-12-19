@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     'education',
     'tutorial',
   ],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-icon.svg',
+  },
 };
 
 export default function RootLayout({

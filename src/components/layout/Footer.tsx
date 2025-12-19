@@ -9,8 +9,11 @@ export function Footer() {
         <p className="text-xs opacity-50 mt-2">
           Built with Next.js, TypeScript, Tailwind CSS, and DaisyUI
         </p>
+        <p className="text-xs opacity-60 mt-2">
+          Made with ❤️ by Jaime Mantilla, MSIT + AI
+        </p>
       </aside>
-      <nav>
+      {/* <nav>
         <div className="grid grid-flow-col gap-4">
           <a
             href="https://github.com"
@@ -27,7 +30,7 @@ export function Footer() {
             About
           </a>
         </div>
-      </nav>
+      </nav> */}
     </footer>
   );
 }

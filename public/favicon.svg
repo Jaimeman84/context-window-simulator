@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#3b82f6"/>
+
+  <!-- Context window representation (stacked bars) -->
+  <rect x="20" y="25" width="60" height="8" rx="2" fill="#ffffff" opacity="0.9"/>
+  <rect x="20" y="38" width="60" height="8" rx="2" fill="#ffffff" opacity="0.9"/>
+  <rect x="20" y="51" width="60" height="8" rx="2" fill="#ffffff" opacity="0.7"/>
+  <rect x="20" y="64" width="35" height="8" rx="2" fill="#ffffff" opacity="0.4"/>
+
+  <!-- Border circle -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#1e40af" stroke-width="3"/>
+</svg>

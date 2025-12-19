@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Progress bar with color-coded capacity indicators (green → yellow → red)
 - Quick Add buttons for common message templates
 - Multi-column layout in sidebar for efficient experimentation
+- Custom favicon with context window visualization (blue circular icon with stacked bars)
 
 ### UI/UX Improvements
 - Optimized message window height to `max-h-64` for better screen utilization
