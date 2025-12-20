@@ -115,6 +115,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Key Concepts Section */}
+      <section className="bg-base-200 py-16">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-center mb-12"
+          >
+            Key Concepts
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="card bg-base-100 shadow-lg"
+            >
+              <div className="card-body">
+                <h3 className="card-title">🌊 Context Drift</h3>
+                <p className="text-base-content/70">
+                  When older messages get pushed out of the context window, the AI "forgets" early parts of the conversation. This can cause the AI to lose track of important details mentioned earlier, leading to inconsistent responses.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="card bg-base-100 shadow-lg"
+            >
+              <div className="card-body">
+                <h3 className="card-title">✨ Hallucination</h3>
+                <p className="text-base-content/70">
+                  When the AI can't access information that was truncated from the context window, it might make up or "hallucinate" details to fill gaps. This happens because the AI tries to provide coherent answers even when it no longer has access to the full conversation history.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works Section */}
       <section className="container mx-auto px-4 py-16">
         <motion.div

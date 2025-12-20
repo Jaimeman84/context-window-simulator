@@ -11,7 +11,7 @@ export function Header() {
   };
 
   return (
-    <header className="navbar bg-base-100 border-b border-base-300 px-4 lg:px-8">
+    <header className="navbar bg-base-100 border-b border-base-300 px-4 lg:px-8 sticky top-0 z-50">
       <div className="navbar-start">
         <Link href="/" className="btn btn-ghost text-xl font-bold">
           <span className="text-2xl">🧠</span>
@@ -38,6 +38,14 @@ export function Header() {
               }
             >
               Scenarios
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/visualizer"
+              className={isActive('/visualizer') ? 'active' : ''}
+            >
+              Visualizer
             </Link>
           </li>
           <li>
@@ -78,6 +86,9 @@ export function Header() {
             </li>
             <li>
               <Link href="/scenarios">Scenarios</Link>
+            </li>
+            <li>
+              <Link href="/visualizer">Visualizer</Link>
             </li>
             <li>
               <Link href="/sandbox">Sandbox</Link>
