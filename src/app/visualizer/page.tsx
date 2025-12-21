@@ -1,15 +1,7 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { MODELS } from '@/types';
-
-interface Message {
-  id: number;
-  role: 'user' | 'assistant';
-  tokens: number;
-  isVisible: boolean;
-  opacity: number;
-}
 
 const SYSTEM_PROMPT_TOKENS = 300;
 const CONTEXT_WINDOW = MODELS[0].contextWindow; // GPT-3.5 4096 tokens
@@ -81,7 +73,7 @@ export default function VisualizerPage() {
   const overflow = Math.max(0, totalTokens - CONTEXT_WINDOW);
 
   // Calculate how many tokens have been truncated from the beginning
-  let tokensTruncated = overflow;
+  const tokensTruncated = overflow;
 
   // Calculate which messages should be visible and their opacity
   const messagesWithState = activeMessages.map((msg, index) => {
@@ -107,8 +99,6 @@ export default function VisualizerPage() {
       return { ...msg, opacity: 1, isTruncated: false, tokensRemaining: msg.tokens };
     }
   });
-
-  const percentFilled = Math.min(100, (totalTokens / CONTEXT_WINDOW) * 100);
 
   const handleNext = () => {
     if (currentStep < STEPS.length - 1) {
@@ -170,7 +160,7 @@ export default function VisualizerPage() {
             </div>
 
             {/* Messages */}
-            {messagesWithState.filter(msg => msg.tokensRemaining > 0).map((msg, index) => {
+            {messagesWithState.filter(msg => msg.tokensRemaining > 0).map((msg) => {
               // Calculate position accounting for truncation
               // Only show the portion that hasn't been truncated
               const originalIndex = messagesWithState.indexOf(msg);
